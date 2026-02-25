@@ -75,28 +75,34 @@ export default function Library() {
                 )}>
                   {item.course_code.split(' ')[0]}
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-bold text-gray-900">{item.course_code}</h3>
+                    <h3 className="font-bold text-gray-900 truncate">{item.course_code}</h3>
                     {item.status === 'verified' && (
-                      <span className="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-                        <CheckCircle className="w-3 h-3" /> VERIFIED
+                      <span className="bg-green-100 text-green-700 text-[8px] font-bold px-1.5 py-0.5 rounded-full flex items-center gap-1 shrink-0">
+                        <CheckCircle className="w-2.5 h-2.5" /> VERIFIED
                       </span>
                     )}
                     {item.status === 'pending' && (
-                      <span className="bg-yellow-100 text-yellow-700 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-                        <Clock className="w-3 h-3" /> PENDING
+                      <span className="bg-yellow-100 text-yellow-700 text-[8px] font-bold px-1.5 py-0.5 rounded-full flex items-center gap-1 shrink-0">
+                        <Clock className="w-2.5 h-2.5" /> {item.upload_count}/10
                       </span>
                     )}
                   </div>
-                  <p className="text-xs text-gray-500 mb-2">{item.title}</p>
+                  <p className="text-[10px] font-medium text-gray-400 mb-0.5 truncate">{item.university}</p>
+                  <p className="text-xs text-gray-700 font-semibold mb-2 truncate">{item.title}</p>
                   <div className="flex gap-2">
-                    <span className="bg-gray-100 text-gray-600 text-[10px] px-2 py-1 rounded-lg font-medium">
+                    <span className="bg-gray-100 text-gray-600 text-[10px] px-2 py-0.5 rounded-lg font-medium">
                       {item.type}
                     </span>
+                    {item.contributor_ids && (
+                      <span className="text-[10px] text-gray-400">
+                        {JSON.parse(item.contributor_ids).length} contributors
+                      </span>
+                    )}
                   </div>
                 </div>
-                <button className="p-2 hover:bg-gray-50 rounded-full">
+                <button className="p-2 hover:bg-gray-50 rounded-full shrink-0">
                   <Download className="w-5 h-5 text-green-600" />
                 </button>
               </div>
