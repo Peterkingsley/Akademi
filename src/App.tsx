@@ -10,6 +10,8 @@ import Tutor from '@/pages/Tutor';
 import ExamPrep from '@/pages/ExamPrep';
 import Onboarding from '@/pages/Onboarding';
 
+import MyUploads from '@/pages/MyUploads';
+
 function AppContent() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -32,6 +34,7 @@ function AppContent() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/tutor" element={<Tutor />} />
       <Route path="/exam-prep" element={<ExamPrep />} />
+      <Route path="/my-uploads" element={<MyUploads />} />
     </Routes>
   );
 }
