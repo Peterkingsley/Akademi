@@ -11,6 +11,11 @@ import ExamPrep from '@/pages/ExamPrep';
 import Onboarding from '@/pages/Onboarding';
 
 import MyUploads from '@/pages/MyUploads';
+import EditAcademicDetails from '@/pages/profile/EditAcademicDetails';
+import Subscription from '@/pages/profile/Subscription';
+import Notifications from '@/pages/profile/Notifications';
+import Appearance from '@/pages/profile/Appearance';
+import OfflineDownloads from '@/pages/profile/OfflineDownloads';
 
 function AppContent() {
   const navigate = useNavigate();
@@ -35,6 +40,13 @@ function AppContent() {
       <Route path="/tutor" element={<Tutor />} />
       <Route path="/exam-prep" element={<ExamPrep />} />
       <Route path="/my-uploads" element={<MyUploads />} />
+      
+      {/* Profile Sub-pages */}
+      <Route path="/profile/edit" element={<EditAcademicDetails />} />
+      <Route path="/profile/subscription" element={<Subscription />} />
+      <Route path="/profile/notifications" element={<Notifications />} />
+      <Route path="/profile/appearance" element={<Appearance />} />
+      <Route path="/profile/downloads" element={<OfflineDownloads />} />
     </Routes>
   );
 }

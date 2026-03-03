@@ -43,17 +43,17 @@ export default function Profile() {
 
         {/* Menu Items */}
         <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-          <MenuItem icon={GraduationCap} label="Edit Academic Details" color="text-blue-600" bg="bg-blue-50" />
+          <MenuItem icon={GraduationCap} label="Edit Academic Details" color="text-blue-600" bg="bg-blue-50" to="/profile/edit" />
           <div className="h-px bg-gray-50 mx-4"></div>
-          <MenuItem icon={CreditCard} label="Subscription Management" color="text-yellow-600" bg="bg-yellow-50" />
+          <MenuItem icon={CreditCard} label="Subscription Management" color="text-yellow-600" bg="bg-yellow-50" to="/profile/subscription" />
         </div>
 
         <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-          <MenuItem icon={Bell} label="Notification Settings" color="text-blue-500" bg="bg-blue-50" />
+          <MenuItem icon={Bell} label="Notification Settings" color="text-blue-500" bg="bg-blue-50" to="/profile/notifications" />
           <div className="h-px bg-gray-50 mx-4"></div>
-          <MenuItem icon={Palette} label="Appearance" color="text-purple-500" bg="bg-purple-50" />
+          <MenuItem icon={Palette} label="Appearance" color="text-purple-500" bg="bg-purple-50" to="/profile/appearance" />
           <div className="h-px bg-gray-50 mx-4"></div>
-          <MenuItem icon={Download} label="Manage Offline Downloads" color="text-green-500" bg="bg-green-50" />
+          <MenuItem icon={Download} label="Manage Offline Downloads" color="text-green-500" bg="bg-green-50" to="/profile/downloads" />
           <div className="h-px bg-gray-50 mx-4"></div>
           <MenuItem icon={Upload} label="My Uploads" color="text-orange-500" bg="bg-orange-50" to="/my-uploads" />
         </div>
